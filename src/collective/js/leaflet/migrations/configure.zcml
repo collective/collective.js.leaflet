@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="collective.js.leaflet">
+  <include package=".v11"/> <!-- read 1.1 because GS has problems to compare 1.1 and 1.0, prefer using ints there -->
+  <!-- vim:set ft=xml: -->
+</configure>

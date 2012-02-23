@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.js.leaflet">
+
+  <!-- ' collective.js.leaflet' Zope 3 browser layer -->
+  <interface name="collective.js.leaflet-theme"
+      interface="collective.js.leaflet.interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+    />
+  <interface  name="collective.js.leaflet" interface="collective.js.leaflet.interfaces.ILayer" />
+
+  <!-- Viewlets registration -->
+
+  <!-- Zope 3 browser views -->
+  <!--
+    <browser:page
+        layer="collective.js.leaflet.interfaces.ILayer"
+        for="collective.js.leaflet.interface.mycontent"
+        name="MyView"
+        class=".view.MyView"
+        allowed_interface=".view.IMyView"
+        permission="zope2.View"
+      />
+  -->
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory -->
+  <browser:resourceDirectory
+      name="collective.js.leaflet"
+      directory="resources"
+      layer="collective.js.leaflet.interfaces.ILayer"
+    />
+
+
+  <!-- vim:set ft=xml: -->
+</configure>

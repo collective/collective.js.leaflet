@@ -1,0 +1,9 @@
+[minibuild]
+dependencies= libxml2-2.7 libxslt-1.1 py-libxml2-2.7 py-libxslt-1.1 pil-1.1.7 libiconv-1.12 python-2.6
+install_method=buildout
+src_uri=git@github.com:collective/collective.js.leaflet.git
+src_type=git
+category=zope
+homepage=
+description= a plone 4.1 buildout for leaflet
+buildout_config=minitage-test-4.1.x.cfg
