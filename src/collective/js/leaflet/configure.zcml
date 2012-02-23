@@ -21,6 +21,5 @@
   <cmf:registerDirectory
        name="collective_js_leaflet_custom"/>
   -->
-  <include package="plone.resource" file="meta.zcml"/>
 </configure>
 <!-- vim:set ft=xml: -->

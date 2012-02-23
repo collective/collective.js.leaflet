@@ -16,5 +16,5 @@
   <!--
     <javascript id="++resource++collective.js.leaflet/something.js"/>
     -->
-
+  <javascript id="++resource++collective.js.leaflet/leaflet.js" authenticated="False" cacheable="True" compression="safe" conditionalcomment="" cookable="True" enabled="True" expression="" inline="False"/>
 </object> 

@@ -23,4 +23,20 @@
   <!--
     <stylesheet id="++resource++collective.js.leaflet/something.css"/>
     --> 
+  <stylesheet id="++resource++collective.js.leaflet/leaflet.css" 
+      insert-before="ploneCustom.css"
+      insert-after="leaflet.css"
+      title="" applyPrefix="False" authenticated="False"
+      cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+      enabled="on" expression="" 
+      media="all"
+      rel="stylesheet" rendering="link"/>
+  <stylesheet id="++resource++collective.js.leaflet/leaflet.ie.css" 
+      insert-before="ploneCustom.css"
+      insert-after="++resource++collective.js.leaflet/leaflet.css"
+      title="" applyPrefix="False" authenticated="False"
+      cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+      enabled="on" expression="" 
+      media="all"
+      rel="stylesheet" rendering="link"/>
 </object>

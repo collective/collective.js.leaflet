@@ -6,9 +6,10 @@ cd $(dirname $0)/..
 rm -rf t/*
 tar xzvf $(ls -1t ~/cgwb/$PROJECT*z) -C t
 files="
-./
+base.cfg
 "
 for f in $files;do
     rsync -aKzv t/$PROJECT/$f $f
 done
+rm -rf t/*
 # vim:set et sts=4 ts=4 tw=80: 

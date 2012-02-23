@@ -4,6 +4,17 @@ Introduction
 
 .. contents::
 
+Description
+=============
+
+Enlarge your plone with the power of leaflet maps.
+
+This integrates the javascripts/css files of leaflet inside the plone relevant registries.
+
+You have an example view at /@@LeafletMapView.
+
+You can look a demo here: `Youtube DEMO<http://www.youtube.com/watch?v=cVOQkhmUffg>`_.
+
 Credits
 ========
 Companies
@@ -25,4 +36,4 @@ Contributors
 -----------------
 
 
- 
+

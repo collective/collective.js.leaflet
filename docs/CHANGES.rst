@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0 - Unreleased
+0.3.1 - Unreleased
 ----------------
 
 * Initial release [kiorky]

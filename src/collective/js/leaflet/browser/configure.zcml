@@ -24,6 +24,14 @@
         permission="zope2.View"
       />
   -->
+  <browser:page
+      layer="collective.js.leaflet.interfaces.ILayer"
+      for="*"
+      name="LeafletMapView"
+      class=".view.LeafletMapView"
+      allowed_interface=".view.ILeafletMapView"
+      permission="zope2.View"
+    /> 
 
   <!-- Zope 3 browser resources -->
 

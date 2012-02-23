@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8081/" />
+<title>collective.js.leaflet</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">collective.js.leaflet</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Generic Plone addon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=project</td>
+	<td>collective.js.leaflet</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;description&quot;]</td>
+	<td>collective.js.leaflet integration for plone</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=author_email</td>
+	<td>kiorky@cryptelium.net</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;keywords&quot;]</td>
+	<td>plone leaflet gis geo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=scm_type</td>
+	<td>git</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=uri</td>
+	<td>git@github.com:collective/collective.js.leaflet.git</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=http_port</td>
+	<td>23668</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=with_ploneproduct_dexterity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_cgwbDownload</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
