@@ -13,7 +13,7 @@ This integrates the javascripts/css files of leaflet inside the plone relevant r
 
 You have an example view at /@@LeafletMapView.
 
-You can look a demo here: `Youtube DEMO<http://www.youtube.com/watch?v=cVOQkhmUffg>`_.
+You can look a demo here: `Youtube DEMO <http://www.youtube.com/watch?v=cVOQkhmUffg>`_.
 
 Credits
 ========
