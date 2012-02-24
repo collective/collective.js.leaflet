@@ -35,7 +35,7 @@
       insert-before="ploneCustom.css"
       insert-after="++resource++collective.js.leaflet/leaflet.css"
       title="" applyPrefix="False" authenticated="False"
-      cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+      cacheable="True" compression="safe" conditionalcomment="lt IE 9" cookable="True"
       enabled="on" expression="" 
       media="all"
       rel="stylesheet" rendering="link"/>

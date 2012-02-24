@@ -1,11 +1,9 @@
 Changelog
 =========
 
-0.3.1.3 (unreleased)
+0.3.1.3 (2012-02-24)
 --------------------
-
-- Nothing changed yet.
-
+- FIX: Enable ie css only on ie [kiorky]
 
 0.3.1.2 (2012-02-24)
 --------------------
