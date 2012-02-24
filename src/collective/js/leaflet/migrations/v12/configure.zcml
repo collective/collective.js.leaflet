@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.js.leaflet">
+  <genericsetup:registerProfile
+      name="1112"
+      title="collective.js.leaflet migration 11 to 12"
+      description=""
+      directory="profile"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+  <genericsetup:upgradeSteps
+      profile="collective.js.leaflet:default"
+      source="11"
+      destination="12">
+    <genericsetup:upgradeStep
+        title="collective.js.leaflet 11 - 12"
+        description=""
+        handler=".upgrade"
+      />
+  </genericsetup:upgradeSteps>
+  <!-- vim:set ft=xml: -->
+</configure>

@@ -7,5 +7,6 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="collective.js.leaflet">
   <include package=".v11"/> <!-- read 1.1 because GS has problems to compare 1.1 and 1.0, prefer using ints there -->
+  <include package=".v12"/> <!-- read 1.1 because GS has problems to compare 1.1 and 1.0, prefer using ints there -->
   <!-- vim:set ft=xml: -->
 </configure>
