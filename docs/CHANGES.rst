@@ -1,14 +1,14 @@
 Changelog
 =========
 
-0.3.2 (unreleased)
-------------------
+0.3.1.2 (unreleased)
+---------------------
 
-- Nothing changed yet.
+- Fix for plone < 41 [kiorky]
 
 
 0.3.1 (2012-02-23)
 ------------------
 
-* Initial release [kiorky]
+- Initial release [kiorky]
 
