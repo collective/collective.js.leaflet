@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3.1.4 (unreleased)
+0.3.1.4 (2012-02-24)
 --------------------
 
 - Fix background urls
