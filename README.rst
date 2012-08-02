@@ -1,11 +1,11 @@
-==============================
+============
 Introduction
-==============================
+============
 
 .. contents::
 
 Description
-=============
+===========
 
 Enlarge your plone with the power of leaflet maps.
 
@@ -16,7 +16,7 @@ You have an example view at /@@LeafletMapView.
 You can look a demo here: `Youtube DEMO <http://www.youtube.com/watch?v=cVOQkhmUffg>`_.
 
 Credits
-========
+=======
 Companies
 ---------
 |makinacom|_
@@ -28,12 +28,12 @@ Companies
 .. _makinacom:  http://www.makina-corpus.com
 
 Authors
-------------
+-------
 
 - kiorky  <kiorky@cryptelium.net>
 
 Contributors
------------------
+------------
 
-
+- Eric BREHAULT <eric.brehault@makina-corpus.com>
 

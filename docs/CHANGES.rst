@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.3.2 (2012-08-02)
+------------------
+
+- Upgrade to Leaflet 0.4 [ebrehault]
+
 0.3.1.5 (unreleased)
 --------------------
 
