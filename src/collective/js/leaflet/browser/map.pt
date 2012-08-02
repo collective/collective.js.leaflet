@@ -16,7 +16,7 @@
 
           map.addLayer(osm);
 
-          map.locateAndSetView();
+          map.locate({setView: true});
         });
 
       </script>
