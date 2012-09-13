@@ -377,13 +377,3 @@
 .leaflet-popup-content {
 	font: 12px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
 	}
-
-/* Fullscreen */
-.leaflet-fullscreen {
-    height: 100% !important;
-    width: 100%;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}

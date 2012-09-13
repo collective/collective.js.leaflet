@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="CMFPlomino">
+
+    <genericsetup:upgradeStep
+        source="10"
+        destination="11"
+        title="collective.js.leaflet 10 - 11"
+        description=""
+        profile="collective.js.leaflet:default"
+        handler=".upgrades.upgrade_10_to_11"
+      />
+    <genericsetup:upgradeStep
+        source="11"
+        destination="12"
+        title="collective.js.leaflet 11 - 12"
+        description=""
+        profile="collective.js.leaflet:default"
+        handler=".upgrades.upgrade_11_to_12"
+      />
+    <genericsetup:upgradeStep
+        source="*"
+        destination="13"
+        title="collective.js.leaflet 12 - 13"
+        description=""
+        profile="collective.js.leaflet:default"
+        handler=".upgrades.upgrade_12_to_13"
+      />
+</configure>

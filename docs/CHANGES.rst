@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.4.4 (2012-09-13)
+------------------
+
+- Upgrade to Leaflet 0.4.4 [ebrehault]
+- Note: we now use the Leaflet lib version as egg version.
+
 0.3.3 (2012-09-03)
 ------------------
 

@@ -44,5 +44,4 @@
   <!-- -->
   <utility factory=".app_config.HiddenProducts" name="collective.js.hiddenproducts"/>
   <utility factory=".app_config.HiddenProfiles" name="collective.js.hiddenprofiles"/> 
-  <include package=".migrations"/>
 </configure> 
