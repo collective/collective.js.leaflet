@@ -27,4 +27,12 @@
         profile="collective.js.leaflet:default"
         handler=".upgrades.upgrade_12_to_13"
       />
+    <genericsetup:upgradeStep
+        source="*"
+        destination="14"
+        title="collective.js.leaflet 13 - 14"
+        description=""
+        profile="collective.js.leaflet:default"
+        handler=".upgrades.upgrade_13_to_14"
+      />
 </configure>
