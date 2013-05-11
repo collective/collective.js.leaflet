@@ -2,8 +2,6 @@
 <metadata>
   <version>10</version>
   <dependencies>
-  <!-- QuickInstalled dependencies -->
       <dependency>profile-collective.js.leaflet:qi</dependency>
-  <!-- GenericSetup dependencies -->
  </dependencies>
 </metadata>
