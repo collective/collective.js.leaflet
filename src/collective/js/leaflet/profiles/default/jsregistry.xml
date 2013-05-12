@@ -2,6 +2,7 @@
 <object name="portal_javascripts">
 
   <javascript
+      bundle="default"
       id="++resource++collective.js.leaflet/leaflet.js"
       authenticated="False"
       cacheable="False"
@@ -12,69 +13,135 @@
       />
 
   <javascript
+      bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster.js"
       insert-after="++resource++collective.js.leaflet/leaflet.js"
       cacheable="False"
       compression="none"
       cookable="False"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
   <javascript
+      bundle="leaflet.fullscreen"
       id="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
       insert-after="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster.js"
       cacheable="True"
       compression="safe"
       cookable="True"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
   <javascript
+      bundle="leaflet.zoomfs"
+      id="++resource++collective.js.leaflet.plugins/leaflet.zoomfs/leaflet.zoomfs.js"
+      insert-after="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.geosearch"
       id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"
       insert-after="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
       cacheable="True"
       compression="safe"
       cookable="True"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
   <javascript
+      bundle="leaflet.geosearch.openstreetmap"
       id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
       insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"
       cacheable="True"
       compression="safe"
       cookable="True"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
   <javascript
-      id="++resource++collective.js.leaflet.plugins/scripts.js"
+      bundle="leaflet.geosearch.bing"
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.bing.js"
       insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
       cacheable="True"
       compression="safe"
       cookable="True"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
   <javascript
+      bundle="leaflet.geosearch.esri"
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.esri.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.bing.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.geosearch.google"
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.google.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.esri.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.geosearch.nokia"
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.nokia.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.google.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.draw"
+      id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw-src.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.stamen"
       id="http://maps.stamen.com/js/tile.stamen.js"
       insert-after="*"
       cacheable="False"
       compression="none"
       cookable="False"
       inline="False"
-      enabled="False"
+      enabled="True"
       expression=""
       />
 
-</object> 
+</object>

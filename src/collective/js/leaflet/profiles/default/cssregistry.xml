@@ -2,7 +2,8 @@
 <object name="portal_css">
 
   <stylesheet
-      id="++resource++collective.js.leaflet/leaflet.css" 
+      bundle="default"
+      id="++resource++collective.js.leaflet/leaflet.css"
       insert-before="ploneCustom.css"
       applyPrefix="True"
       authenticated="False"
@@ -11,21 +12,21 @@
       conditionalcomment=""
       cookable="True"
       enabled="True"
-      expression="" 
+      expression=""
       media="all"
       rel="stylesheet"
       rendering="link"
       />
 
   <stylesheet
+      bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.css"
       insert-after="++resource++collective.js.leaflet/leaflet.css"
       applyPrefix="True"
-      bundle="default"
       cacheable="True"
       compression="safe"
       cookable="True"
-      enabled="False"
+      enabled="True"
       expression=""
       media="screen"
       rel="stylesheet"
@@ -33,14 +34,14 @@
       />
 
   <stylesheet
+      bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.css"
       insert-after="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.css"
       applyPrefix="True"
-      bundle="default"
       cacheable="True"
       compression="safe"
       cookable="True"
-      enabled="False"
+      enabled="True"
       expression=""
       media="screen"
       rel="stylesheet"
@@ -48,14 +49,14 @@
       />
 
   <stylesheet
+      bundle="leaflet.fullscreen"
       id="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.css"
       insert-after="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.css"
       applyPrefix="True"
-      bundle="default"
       cacheable="True"
       compression="safe"
       cookable="True"
-      enabled="False"
+      enabled="True"
       expression=""
       media="screen"
       rel="stylesheet"
@@ -63,25 +64,40 @@
       />
 
   <stylesheet
+      bundle="leaflet.geosearch"
       id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css"
       insert-after="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.css"
       applyPrefix="True"
-      bundle="default"
       cacheable="True"
       compression="safe"
       cookable="True"
-      enabled="False"
+      enabled="True"
       expression=""
       media="screen"
       rel="stylesheet"
       rendering="link"
       />
-  
+
   <stylesheet
-      id="++resource++collective.js.leaflet/leaflet.ie.css" 
+      bundle="leaflet.draw"
+      id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw.css"
       insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css"
       applyPrefix="True"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      enabled="True"
+      expression=""
+      media="screen"
+      rel="stylesheet"
+      rendering="link"
+      />
+
+  <stylesheet
       bundle="default"
+      id="++resource++collective.js.leaflet/leaflet.ie.css"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css"
+      applyPrefix="True"
       cacheable="True"
       compression="safe"
       conditionalcomment="lt ie 8"
@@ -95,15 +111,31 @@
       />
 
   <stylesheet
+      bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.ie.css"
       insert-after="++resource++collective.js.leaflet.plugins/Leaflet/dist/leaflet.ie.css"
       applyPrefix="True"
-      bundle="default"
       cacheable="True"
       compression="safe"
       conditionalcomment="lt ie 8"
       cookable="True"
-      enabled="False"
+      enabled="True"
+      expression=""
+      media="screen"
+      rel="stylesheet"
+      rendering="link"
+      />
+
+  <stylesheet
+      bundle="leaflet.draw"
+      id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw.ie.css"
+      insert-after="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.ie.css"
+      applyPrefix="True"
+      cacheable="True"
+      compression="safe"
+      conditionalcomment="lt ie 8"
+      cookable="True"
+      enabled="True"
       expression=""
       media="screen"
       rel="stylesheet"
