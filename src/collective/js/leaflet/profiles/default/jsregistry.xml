@@ -1,4 +1,80 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
-  <javascript id="++resource++collective.js.leaflet/leaflet.js" authenticated="False" cacheable="True" compression="safe" conditionalcomment="" cookable="True" enabled="True" expression="" inline="False"/>
+
+  <javascript
+      id="++resource++collective.js.leaflet/leaflet.js"
+      authenticated="False"
+      cacheable="False"
+      compression="none"
+      cookable="False"
+      enabled="True"
+      inline="False"
+      />
+
+  <javascript
+      id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster.js"
+      insert-after="++resource++collective.js.leaflet/leaflet.js"
+      cacheable="False"
+      compression="none"
+      cookable="False"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
+  <javascript
+      id="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
+      insert-after="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
+  <javascript
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"
+      insert-after="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
+  <javascript
+      id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
+  <javascript
+      id="++resource++collective.js.leaflet.plugins/scripts.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
+  <javascript
+      id="http://maps.stamen.com/js/tile.stamen.js"
+      insert-after="*"
+      cacheable="False"
+      compression="none"
+      cookable="False"
+      inline="False"
+      enabled="False"
+      expression=""
+      />
+
 </object> 
