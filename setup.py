@@ -46,6 +46,7 @@ setup(
         'z3c.autoinclude',
         'Plone',
         'plone.app.upgrade',
+        'Products.ResourceRegistries>=2.1a1',
         # -*- Extra requirements: -*-
     ],
     extras_require={
