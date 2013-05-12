@@ -1,7 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="CMFPlomino">
+    i18n_domain="collective.js.leaflet">
 
     <genericsetup:upgradeStep
         source="10"
@@ -35,4 +35,5 @@
         profile="collective.js.leaflet:default"
         handler=".upgrades.upgrade_13_to_14"
       />
+
 </configure>

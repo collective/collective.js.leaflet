@@ -3,21 +3,29 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.js.leaflet">
+
   <genericsetup:registerProfile
       name="default"
       title="collective.js.leaflet"
       directory="profiles/default"
       description="Install the collective.js.leaflet addon on this plone site."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+      />
+
   <genericsetup:registerProfile
-      title="collective.js.leaflet uninstall" 
+      title="collective.js.leaflet uninstall"
       name="uninstall"
       description="Uninstall the collective.js.leaflet addon on tbis plone site."
       directory="profiles/uninstall"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       />
-  <utility factory=".app_config.HiddenProducts" name="collective.js.hiddenproducts"/>
-  <utility factory=".app_config.HiddenProfiles" name="collective.js.hiddenprofiles"/> 
-</configure> 
+
+  <utility
+      factory=".app_config.HiddenProducts"
+      name="collective.js.hiddenproducts"/>
+  <utility
+      factory=".app_config.HiddenProfiles"
+      name="collective.js.hiddenprofiles"/>
+
+</configure>

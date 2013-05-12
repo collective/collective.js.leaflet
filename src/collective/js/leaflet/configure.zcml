@@ -2,26 +2,19 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.js.leaflet">
 
-  <include file="upgrades.zcml" />
+  <five:registerPackage package="." initialize=".initialize" />
+  <i18n:registerTranslations directory="locales" />
+
   <include package="Products.Five" file="configure.zcml"/>
   <include package="Products.CMFCore" file="permissions.zcml" />
-  <!-- Load the ZCML configuration for the collective.js.leaflet package.-->
-  <five:registerPackage package="." initialize=".initialize" />
-  <!-- activate to customize the dashboard-->
-  <!-- <adapter factory=".dashboard.MyPortalDefaultDashboard"/>-->
+
   <include package=".browser" />
+
   <include file="profiles.zcml" />
-  <i18n:registerTranslations directory="locales" />
-  <!-- activate this statement to include a zope2 skin directory
-  <cmf:registerDirectory
-       name="collective_js_leaflet_custom"/>
-  -->
+  <include file="upgrades.zcml" />
+
 </configure>
 <!-- vim:set ft=xml: -->

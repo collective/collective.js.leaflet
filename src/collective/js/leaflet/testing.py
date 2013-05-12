@@ -5,15 +5,14 @@ from OFS.Folder import Folder
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import PLONE_FIXTURE
-from plone.app.testing import IntegrationTesting as BIntegrationTesting, FunctionalTesting as BFunctionalTesting
+from plone.app.testing import IntegrationTesting as BIntegrationTesting
+from plone.app.testing import FunctionalTesting as BFunctionalTesting
 from plone.app.testing import setRoles
-from plone.app.testing.selenium_layers import SELENIUM_FUNCTIONAL_TESTING as SELENIUM_TESTING
+from plone.app.testing.selenium_layers import SELENIUM_FUNCTIONAL_TESTING
 from plone.testing import z2
 from plone.app.testing.helpers import logout
-from plone.app.testing import (
-    TEST_USER_ROLES,
-    SITE_OWNER_NAME,
-)
+from plone.app.testing import SITE_OWNER_NAME
+from plone.app.testing import TEST_USER_ROLES
 
 PLONE_MANAGER_NAME = 'Plone_manager'
 PLONE_MANAGER_ID = 'plonemanager'
@@ -42,8 +41,8 @@ class CollectiveJsLeafletLayer(PloneSandboxLayer):
             self[key] = value
 
     def setUpZope(self, app, configurationContext):
-        """Set up the additional products required for the collective.js) site leaflet.
-        until the setup of the Plone site testing layer.
+        """Set up the additional products required for the collective.js) site
+        leaflet.  until the setup of the Plone site testing layer.
         """
         self.app = app
         self.browser = Browser(app)
@@ -104,9 +103,13 @@ class FunctionalTesting(LayerMixin, BFunctionalTesting):
         LayerMixin.testSetUp(self)
 
 
-COLLECTIVE_JS_LEAFLET_FIXTURE             = CollectiveJsLeafletLayer()
-COLLECTIVE_JS_LEAFLET_INTEGRATION_TESTING = IntegrationTesting(name = "CollectiveJsLeaflet:Integration")
-COLLECTIVE_JS_LEAFLET_FUNCTIONAL_TESTING  = FunctionalTesting( name = "CollectiveJsLeaflet:Functional")
-COLLECTIVE_JS_LEAFLET_SELENIUM_TESTING    = FunctionalTesting(bases = (SELENIUM_TESTING, COLLECTIVE_JS_LEAFLET_FUNCTIONAL_TESTING,), name = "CollectiveJsLeaflet:Selenium")
+CJL_FIXTURE = CollectiveJsLeafletLayer()
+CJL_INTEGRATION_TESTING = IntegrationTesting(
+    name="CollectiveJsLeaflet:Integration")
+CJL_FUNCTIONAL_TESTING = FunctionalTesting(
+    name="CollectiveJsLeaflet:Functional")
+CJL_SELENIUM_TESTING = FunctionalTesting(
+    bases=(SELENIUM_FUNCTIONAL_TESTING, CJL_FUNCTIONAL_TESTING),
+    name="CollectiveJsLeaflet:Selenium")
 
 # vim:set ft=python:

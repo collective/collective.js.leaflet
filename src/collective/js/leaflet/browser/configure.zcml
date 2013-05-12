@@ -28,5 +28,5 @@
       layer="collective.js.leaflet.interfaces.ILayer"
     />
 
-<!-- vim:set ft=xml: -->
 </configure>
+<!-- vim:set ft=xml: -->
