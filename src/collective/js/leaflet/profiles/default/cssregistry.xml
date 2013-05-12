@@ -96,7 +96,7 @@
   <stylesheet
       bundle="default"
       id="++resource++collective.js.leaflet/leaflet.ie.css"
-      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css"
+      insert-after="*"
       applyPrefix="True"
       cacheable="True"
       compression="safe"
@@ -104,7 +104,6 @@
       cookable="True"
       enabled="True"
       expression=""
-      insert-after="*"
       media="screen"
       rel="stylesheet"
       rendering="link"
@@ -113,7 +112,7 @@
   <stylesheet
       bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.ie.css"
-      insert-after="++resource++collective.js.leaflet.plugins/Leaflet/dist/leaflet.ie.css"
+      insert-after="++resource++collective.js.leaflet/leaflet.ie.css"
       applyPrefix="True"
       cacheable="True"
       compression="safe"

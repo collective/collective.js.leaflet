@@ -51,7 +51,7 @@
   <javascript
       bundle="leaflet.geosearch"
       id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"
-      insert-after="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"
+      insert-after="++resource++collective.js.leaflet.plugins/leaflet.zoomfs/leaflet.zoomfs.js"
       cacheable="True"
       compression="safe"
       cookable="True"
@@ -123,7 +123,7 @@
   <javascript
       bundle="leaflet.draw"
       id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw-src.js"
-      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"
+      insert-after="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.nokia.js"
       cacheable="True"
       compression="safe"
       cookable="True"
