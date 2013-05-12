@@ -37,3 +37,4 @@ Contributors
 
 - Eric BREHAULT <eric.brehault@makina-corpus.com>
 
+- Johannes Raggam <dev@programmatic.pro>

@@ -4,11 +4,12 @@ Changelog
 0.5dev (unreleased)
 -------------------
 
-- Add some interesting Plugins and register it unenabled.
+- Add some interesting plugins and introduce bundle concept to enable
+  individual plugins.
   [thet]
 
-- New Leaflet resource structure: Get directly from github and adapt the
-  resource directory to use new subdirectory. This change is backwards
+- New Leaflet resource structure: Get source directly from Github and adapt the
+  resource directory to use the new subdirectory. This change is backwards
   compatible.
   [thet]
 
