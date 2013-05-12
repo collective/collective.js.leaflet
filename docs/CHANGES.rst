@@ -1,6 +1,21 @@
 Changelog
 =========
 
+0.5dev (unreleased)
+-------------------
+
+- Add some interesting Plugins and register it unenabled.
+  [thet]
+
+- New Leaflet resource structure: Get directly from github and adapt the
+  resource directory to use new subdirectory. This change is backwards
+  compatible.
+  [thet]
+
+- PEP8 Cleanup.
+  [thet]
+
+
 0.4.4.1 (2012-09-24)
 --------------------
 

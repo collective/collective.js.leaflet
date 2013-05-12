@@ -20,13 +20,18 @@
       class=".view.LeafletMapView"
       allowed_interface=".view.ILeafletMapView"
       permission="zope2.View"
-    /> 
+      /> 
 
   <browser:resourceDirectory
       name="collective.js.leaflet"
+      directory="resources/Leaflet/dist"
+      layer="collective.js.leaflet.interfaces.ILayer"
+      />
+  <browser:resourceDirectory
+      name="collective.js.leaflet.plugins"
       directory="resources"
       layer="collective.js.leaflet.interfaces.ILayer"
-    />
+      />
 
 </configure>
 <!-- vim:set ft=xml: -->
