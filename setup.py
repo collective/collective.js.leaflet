@@ -18,9 +18,10 @@ long_description = "\n\n".join(
 
 classifiers = [
     "Framework :: Plone",
-    "Framework :: Plone :: 4.0",
-    "Framework :: Plone :: 4.1",
+    #"Framework :: Plone :: 4.0", # no ResourceRegistries>=2.1a1
+    #"Framework :: Plone :: 4.1", # no ResourceRegistries>=2.1a1
     "Framework :: Plone :: 4.2",
+    "Framework :: Plone :: 4.3",
     "Programming Language :: Python",
     "Topic :: Software Development"
 ]
@@ -30,7 +31,7 @@ setup(
     name=name,
     namespace_packages=['collective', 'collective.js'],
     version=version,
-    description='collective.js.leaflet integration for plone',
+    description='Leaflet maps integration for Plone',
     long_description=long_description,
     classifiers=classifiers,
     keywords='plone leaflet gis geo',
