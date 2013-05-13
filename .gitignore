@@ -1,4 +1,7 @@
 *.EGG
+plone.env
+minitag*
+*mo
 *.EGG-INFO
 *.egg
 *.egg-info
