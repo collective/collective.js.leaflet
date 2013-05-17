@@ -133,6 +133,66 @@
       />
 
   <javascript
+      bundle="leaflet.locatecontrol"
+      id="++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.js"
+      insert-after="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw-src.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.minimap"
+      id="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.js"
+      insert-after="++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.minimap"
+      id="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap-de.js"
+      insert-after="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.providers"
+      id="++resource++collective.js.leaflet.plugins/leaflet-providers/leaflet-providers.js"
+      insert-after="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap-de.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
+      bundle="leaflet.awesome-markers"
+      id="++resource++collective.js.leaflet.plugins/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js"
+      insert-after="++resource++collective.js.leaflet.plugins/leaflet-providers/leaflet-providers.js"
+      cacheable="True"
+      compression="safe"
+      cookable="True"
+      inline="False"
+      enabled="True"
+      expression=""
+      />
+
+  <javascript
       bundle="leaflet.stamen"
       id="http://maps.stamen.com/js/tile.stamen.js"
       insert-after="*"
