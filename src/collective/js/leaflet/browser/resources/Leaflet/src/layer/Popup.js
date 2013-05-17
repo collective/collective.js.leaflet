@@ -113,7 +113,7 @@ L.Popup = L.Class.extend({
 		if (this._animated) {
 			events.zoomanim = this._zoomAnimation;
 		}
-		if (this._map.options.closePopupOnClick) {
+		if ('closeOnClick' in this.options ? this.options.closeOnClick : this._map.options.closePopupOnClick) {
 			events.preclick = this._close;
 		}
 		if (this.options.keepInView) {
@@ -125,7 +125,7 @@ L.Popup = L.Class.extend({
 
 	_close: function () {
 		if (this._map) {
-			this._map.removeLayer(this);
+			this._map.closePopup(this);
 		}
 	},
 
@@ -306,10 +306,13 @@ L.Map.include({
 		return this.addLayer(popup);
 	},
 
-	closePopup: function () {
-		if (this._popup) {
-			this.removeLayer(this._popup);
+	closePopup: function (popup) {
+		if (!popup || popup === this._popup) {
+			popup = this._popup;
 			this._popup = null;
+		}
+		if (popup) {
+			this.removeLayer(popup);
 		}
 		return this;
 	}

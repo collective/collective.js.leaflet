@@ -126,6 +126,14 @@ describe('Events', function() {
 			expect(spy5.called).to.be(false);
 		});
 
+		it('can handle calls to #removeEventListener on objects with no registered event listeners', function () {
+			var obj = new Klass();
+			var removeNonExistentListener = function () {
+				obj.removeEventListener('test');
+			};
+			expect(removeNonExistentListener).to.not.throwException();
+		});
+
 		// added due to context-sensitive removeListener optimization
 		it('fires multiple listeners with the same context with id', function () {
 			var obj = new Klass(),
@@ -181,6 +189,7 @@ describe('Events', function() {
 			expect(spy1.called).to.be(false);
 			expect(spy2.called).to.be(false);
 		});
+
 		it('doesnt lose track of listeners when removing non existent ones', function () {
 			var obj = new Klass(),
 			    spy = sinon.spy(),
@@ -199,6 +208,16 @@ describe('Events', function() {
 			obj.addEventListener('test', spy2, foo);
 
 			obj.fireEvent('test');
+
+			expect(spy.called).to.be(false);
+		});
+
+		it('makes sure an event is not triggered if a listener is removed during dispatch',function() {
+			var obj = new Klass(),
+			    spy = sinon.spy();
+			    obj.addEventListener('test', function() { obj.removeEventListener('test',spy); });
+			    obj.addEventListener('test', spy);
+			    obj.fireEvent('test');
 
 			expect(spy.called).to.be(false);
 		});

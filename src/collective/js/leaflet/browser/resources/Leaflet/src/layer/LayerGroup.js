@@ -29,10 +29,10 @@ L.LayerGroup = L.Class.extend({
 	},
 
 	removeLayer: function (layer) {
-		var id = this.getLayerId(layer);
+		var id = layer in this._layers ? layer : this.getLayerId(layer);
 
 		if (this._map && this._layers[id]) {
-			this._map.removeLayer(layer);
+			this._map.removeLayer(this._layers[id]);
 		}
 
 		delete this._layers[id];
@@ -43,7 +43,7 @@ L.LayerGroup = L.Class.extend({
 	hasLayer: function (layer) {
 		if (!layer) { return false; }
 
-		return (this.getLayerId(layer) in this._layers);
+		return (layer in this._layers || this.getLayerId(layer) in this._layers);
 	},
 
 	clearLayers: function () {
@@ -88,8 +88,13 @@ L.LayerGroup = L.Class.extend({
 		return this;
 	},
 
+	getLayer: function (id) {
+		return this._layers[id];
+	},
+
 	getLayers: function () {
 		var layers = [];
+
 		for (var i in this._layers) {
 			layers.push(this._layers[i]);
 		}

@@ -240,7 +240,11 @@ L.TileLayer = L.Class.extend({
 				var className = 'leaflet-tile-container leaflet-zoom-animated';
 
 				this._bgBuffer = L.DomUtil.create('div', className, this._container);
+				this._bgBuffer.style.zIndex = 1;
+
 				this._tileContainer = L.DomUtil.create('div', className, this._container);
+				this._tileContainer.style.zIndex = 2;
+
 			} else {
 				this._tileContainer = this._container;
 			}
@@ -345,11 +349,11 @@ L.TileLayer = L.Class.extend({
 
 		var options = this.options;
 
-		if (!options.continuousWorld && options.noWrap) {
+		if (!options.continuousWorld) {
 			var limit = this._getWrapTileNum();
 
 			// don't load if exceeds world bounds
-			if (tilePoint.x < 0 || tilePoint.x >= limit ||
+			if ((options.noWrap && (tilePoint.x < 0 || tilePoint.x >= limit)) ||
 				tilePoint.y < 0 || tilePoint.y >= limit) { return false; }
 		}
 
