@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.5dev (unreleased)
--------------------
+0.5 (2013-06-11)
+----------------
 
 - Add some interesting plugins and introduce bundle concept to enable
   individual plugins.
