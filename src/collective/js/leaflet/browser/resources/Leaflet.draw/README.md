@@ -161,8 +161,7 @@ These options will allow you to configure the draw toolbar and it's handlers.
 The following options will allow you to configure the individual draw handlers.
 
 <a name="polylineoptions" />
-<a name="polygonoptions" />
-#### PolylineOptions and PolygonOptions
+#### PolylineOptions
 
 Polyline and Polygon drawing handlers take the same options.
 
@@ -174,6 +173,15 @@ Polyline and Polygon drawing handlers take the same options.
 | guidelineDistance | Number | `20` | Distance in pixels between each guide dash.
 | shapeOptions | [Leaflet Polyline options](http://leafletjs.com/reference.html#polyline-options) | [See code](https://github.com/Leaflet/Leaflet.draw/blob/master/src/draw/handler/Draw.Polyline.js#L20) | The options used when drawing the polyline/polygon on the map.
 | zIndexOffset | Number | `2000` | This should be a high number to ensure that you can draw over all other layers on the map.
+
+<a name="polygonoptions" />
+#### PolygonOptions
+
+Polygon options include all of the Polyline options plus the option to show the approximate area.
+
+| Option | Type | Default | Description
+| --- | --- | --- | ---
+| showArea | Bool | `false` | Show the area of the drawn polygon in m², ha or km². **The area is only approximate and become less accurate the larger the polygon is.**
 
 <a name="rectangleoptions" />
 #### RectangleOptions
@@ -217,7 +225,7 @@ These options will allow you to configure the draw toolbar and its handlers.
 | Option | Type | Default | Description
 | --- | --- | --- | ---
 | title | String | `'Edit Layers'` | The title used for the edit button.
-| selectedPathOptions | [Leaflet Path options](http://leafletjs.com/reference.html#path-options) | [See code](https://github.com/Leaflet/Leaflet.draw/blob/master/src/edit/handler/EditToolbar.Edit.js#L9) | The path options for how the layers will look like while in edit mode.
+| selectedPathOptions | [Leaflet Path options](http://leafletjs.com/reference.html#path-options) | [See code](https://github.com/Leaflet/Leaflet.draw/blob/master/src/edit/handler/EditToolbar.Edit.js#L9) | The path options for how the layers will look like while in edit mode. If this is set to null the editable path options will not be set.
 
 <a name="deletehandleroptions" />
 #### DeleteHandlerOptions

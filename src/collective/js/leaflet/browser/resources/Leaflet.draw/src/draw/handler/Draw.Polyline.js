@@ -9,7 +9,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		allowIntersection: true,
 		drawError: {
 			color: '#b00b00',
-			message: '<strong>Error:</strong> shape edges cannot cross!',
+			message: L.drawLocal.draw.polyline.error,
 			timeout: 2500
 		},
 		icon: new L.DivIcon({
@@ -136,8 +136,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		// should this be moved to _updateGuide() ?
 		this._currentLatLng = latlng;
 
-		// Update the label
-		this._tooltip.updatePosition(latlng);
+		this._updateTooltip(latlng);
 
 		// Update the guide line
 		this._updateGuide(newPos);
@@ -173,6 +172,8 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		this._vertexAdded(latlng);
 
 		this._clearGuides();
+
+		this._updateTooltip();
 	},
 
 	_updateFinishHandler: function () {
@@ -205,17 +206,24 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		var markerCount = this._markers.length;
 
 		if (markerCount > 0) {
-			// Update the tooltip text, as long it's not showing and error
-			if (!this._errorShown) {
-				this._tooltip.updateContent(this._getTooltipText());
-			}
-
 			// draw the guide line
 			this._clearGuides();
 			this._drawGuide(
 				this._map.latLngToLayerPoint(this._markers[markerCount - 1].getLatLng()),
 				newPos
 			);
+		}
+	},
+
+	_updateTooltip: function (latLng) {
+		var text = this._getTooltipText();
+
+		if (latLng) {
+			this._tooltip.updatePosition(latLng);
+		}
+
+		if (!this._errorShown) {
+			this._tooltip.updateContent(text);
 		}
 	},
 
@@ -275,7 +283,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 
 		if (this._markers.length === 0) {
 			labelText = {
-				text: 'Click to start drawing line.'
+				text: L.drawLocal.draw.polyline.tooltip.start
 			};
 		} else {
 			// calculate the distance from the last fixed point to the mouse position
@@ -285,12 +293,12 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 
 			if (this._markers.length === 1) {
 				labelText = {
-					text: 'Click to continue drawing line.',
+					text: L.drawLocal.draw.polyline.tooltip.cont,
 					subtext: distanceStr
 				};
 			} else {
 				labelText = {
-					text: 'Click last point to finish line.',
+					text: L.drawLocal.draw.polyline.tooltip.end,
 					subtext: distanceStr
 				};
 			}
@@ -348,7 +356,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 	},
 
 	_cleanUpShape: function () {
-		if (this._markers.length > 0) {
+		if (this._markers.length > 1) {
 			this._markers[this._markers.length - 1].off('click', this._finishShape, this);
 		}
 	},

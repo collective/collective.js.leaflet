@@ -46,7 +46,7 @@ L.Edit.Poly = L.Handler.extend({
 		this._markers = [];
 
 		var latlngs = this._poly._latlngs,
-		    i, j, len, marker;
+			i, j, len, marker;
 
 		// TODO refactor holes implementation in Polygon to support it here
 
