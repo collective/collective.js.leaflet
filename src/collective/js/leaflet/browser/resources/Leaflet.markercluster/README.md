@@ -3,7 +3,11 @@ Leaflet.markercluster
 
 Provides Beautiful Animated Marker Clustering functionality for [Leaflet](http://leafletjs.com), a JS library for interactive maps.
 
-*Requires Leaflet 0.4.2 or newer*
+*Requires Leaflet 0.6.0-dev 2013-01-21 or newer as of 10b91f8ad4419437aec9d8158e30e7990240dd3e*
+
+For a leaflet 0.5 compatible version, [Download b128e950d8f5d7da5b60bd0aa9a88f6d3dd17c98](https://github.com/Leaflet/Leaflet.markercluster/archive/b128e950d8f5d7da5b60bd0aa9a88f6d3dd17c98.zip)
+
+For a Leaflet 0.4 compatible version, [Download the 0.2 release](https://github.com/Leaflet/Leaflet.markercluster/archive/0.2.zip)
 
 ## Using the plugin
 See the included examples for usage.
@@ -23,10 +27,10 @@ map.addLayer(markers);
 
 ### Defaults
 By default the Clusterer enables some nice defaults for you:
-showCoverageOnHover: When you mouse over a cluster it shows the bounds of its markers.
-zoomToBoundsOnClick: When you click a cluster we zoom to its bounds.
-spiderfyOnMaxZoom: When you click a cluster at the bottom zoom level we spiderfy it so you can see all of its markers.
-removeOutsideVisibleBounds: Clusters and markers too far from the viewport are removed from the map for performance.
+* **showCoverageOnHover**: When you mouse over a cluster it shows the bounds of its markers.
+* **zoomToBoundsOnClick**: When you click a cluster we zoom to its bounds.
+* **spiderfyOnMaxZoom**: When you click a cluster at the bottom zoom level we spiderfy it so you can see all of its markers.
+* **removeOutsideVisibleBounds**: Clusters and markers too far from the viewport are removed from the map for performance.
 
 You can disable any of these as you want in the options when you create the MarkerClusterGroup:
 ```javascript
@@ -96,6 +100,13 @@ See [marker-clustering-zoomtobounds.html](http://leaflet.github.com/Leaflet.mark
 markers.on('clusterclick', function (a) {
 	a.layer.zoomToBounds();
 });
+```
+
+### Getting the visible parent of a marker
+If you have a marker in your MarkerClusterGroup and you want to get the visible parent of it (Either itself or a cluster it is contained in that is currently visible on the map).
+```
+var visibleOne = markerClusterGroup.getVisibleParent(myMarker);
+console.log(visibleOne.getLatLng());
 ```
 
 ### Adding and removing Markers

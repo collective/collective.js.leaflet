@@ -132,9 +132,7 @@ L.MarkerCluster = L.Marker.extend({
 			this._backupLatlng = this._latlng;
 			this.setLatLng(startPos);
 		}
-		this._noHas = true;
-		L.FeatureGroup.prototype.addLayer.call(this._group, this);
-		delete this._noHas;
+		this._group._featureGroup.addLayer(this);
 	},
 
 	_recursivelyAnimateChildrenIn: function (bounds, center, maxZoom) {
@@ -210,12 +208,12 @@ L.MarkerCluster = L.Marker.extend({
 						nm._backupLatlng = nm.getLatLng();
 
 						nm.setLatLng(startPos);
-						nm.setOpacity(0);
+						if (nm.setOpacity) {
+							nm.setOpacity(0);
+						}
 					}
 
-					nm._noHas = true;
-					L.FeatureGroup.prototype.addLayer.call(c._group, nm);
-					delete nm._noHas;
+					c._group._featureGroup.addLayer(nm);
 				}
 			},
 			function (c) {
@@ -262,8 +260,10 @@ L.MarkerCluster = L.Marker.extend({
 				for (i = c._markers.length - 1; i >= 0; i--) {
 					m = c._markers[i];
 					if (!exceptBounds || !exceptBounds.contains(m._latlng)) {
-						L.FeatureGroup.prototype.removeLayer.call(c._group, m);
-						m.setOpacity(1);
+						c._group._featureGroup.removeLayer(m);
+						if (m.setOpacity) {
+							m.setOpacity(1);
+						}
 					}
 				}
 			},
@@ -272,10 +272,10 @@ L.MarkerCluster = L.Marker.extend({
 				for (i = c._childClusters.length - 1; i >= 0; i--) {
 					m = c._childClusters[i];
 					if (!exceptBounds || !exceptBounds.contains(m._latlng)) {
-						if (!L.FeatureGroup.prototype.hasLayer || L.FeatureGroup.prototype.hasLayer.call(c._group, m)) {
-							L.FeatureGroup.prototype.removeLayer.call(c._group, m);
+						c._group._featureGroup.removeLayer(m);
+						if (m.setOpacity) {
+							m.setOpacity(1);
 						}
-						m.setOpacity(1);
 					}
 				}
 			}
