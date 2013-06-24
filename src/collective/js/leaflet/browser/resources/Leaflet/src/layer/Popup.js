@@ -15,7 +15,7 @@ L.Popup = L.Class.extend({
 		maxHeight: null,
 		autoPan: true,
 		closeButton: true,
-		offset: [0, 6],
+		offset: [0, 7],
 		autoPanPadding: [5, 5],
 		keepInView: false,
 		className: '',
@@ -27,6 +27,7 @@ L.Popup = L.Class.extend({
 
 		this._source = source;
 		this._animated = L.Browser.any3d && this.options.zoomAnimation;
+		this._isOpen = false;
 	},
 
 	onAdd: function (map) {
@@ -152,7 +153,7 @@ L.Popup = L.Class.extend({
 
 		this._contentNode = L.DomUtil.create('div', prefix + '-content', wrapper);
 		L.DomEvent.on(this._contentNode, 'mousewheel', L.DomEvent.stopPropagation);
-
+		L.DomEvent.on(wrapper, 'contextmenu', L.DomEvent.stopPropagation);
 		this._tipContainer = L.DomUtil.create('div', prefix + '-tip-container', container);
 		this._tip = L.DomUtil.create('div', prefix + '-tip', this._tipContainer);
 	},
@@ -301,6 +302,7 @@ L.Map.include({
 			    .setLatLng(latlng)
 			    .setContent(content);
 		}
+		popup._isOpen = true;
 
 		this._popup = popup;
 		return this.addLayer(popup);
@@ -313,6 +315,7 @@ L.Map.include({
 		}
 		if (popup) {
 			this.removeLayer(popup);
+			popup._isOpen = false;
 		}
 		return this;
 	}

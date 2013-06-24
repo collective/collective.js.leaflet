@@ -117,6 +117,7 @@ L.Map = L.Class.extend({
 
 		if (!bounds) {
 			this._boundsMinZoom = null;
+			this.off('moveend', this._panInsideMaxBounds, this);
 			return this;
 		}
 
@@ -186,14 +187,13 @@ L.Map = L.Class.extend({
 		// TODO looks ugly, refactor!!!
 		if (this.options.zoomAnimation && L.TileLayer && (layer instanceof L.TileLayer)) {
 			this._tileLayersNum++;
-            this._tileLayersToLoad++;
-            layer.on('load', this._onTileLayerLoad, this);
+			this._tileLayersToLoad++;
+			layer.on('load', this._onTileLayerLoad, this);
 		}
 
-		this.whenReady(function () {
-			layer.onAdd(this);
-			this.fire('layeradd', {layer: layer});
-		}, this);
+		if (this._loaded) {
+			this._layerAdd(layer);
+		}
 
 		return this;
 	},
@@ -203,7 +203,10 @@ L.Map = L.Class.extend({
 
 		if (!this._layers[id]) { return; }
 
-		layer.onRemove(this);
+		if (this._loaded) {
+			layer.onRemove(this);
+			this.fire('layerremove', {layer: layer});
+		}
 
 		delete this._layers[id];
 		if (this._zoomBoundLayers[id]) {
@@ -214,11 +217,11 @@ L.Map = L.Class.extend({
 		// TODO looks ugly, refactor
 		if (this.options.zoomAnimation && L.TileLayer && (layer instanceof L.TileLayer)) {
 			this._tileLayersNum--;
-            this._tileLayersToLoad--;
-            layer.off('load', this._onTileLayerLoad, this);
+			this._tileLayersToLoad--;
+			layer.off('load', this._onTileLayerLoad, this);
 		}
 
-		return this.fire('layerremove', {layer: layer});
+		return this;
 	},
 
 	hasLayer: function (layer) {
@@ -234,9 +237,13 @@ L.Map = L.Class.extend({
 		return this;
 	},
 
-	invalidateSize: function (animate) {
-		var oldSize = this.getSize();
+	invalidateSize: function (options) {
+		options = L.extend({
+			animate: false,
+			pan: true
+		}, options === true ? {animate: true} : options);
 
+		var oldSize = this.getSize();
 		this._sizeChanged = true;
 
 		if (this.options.maxBounds) {
@@ -248,23 +255,27 @@ L.Map = L.Class.extend({
 		var newSize = this.getSize(),
 		    offset = oldSize.subtract(newSize).divideBy(2).round();
 
-		if ((offset.x !== 0) || (offset.y !== 0)) {
-			if (animate === true) {
-				this.panBy(offset);
-			} else {
+		if (!offset.x && !offset.y) { return this; }
+
+		if (options.animate && options.pan) {
+			this.panBy(offset);
+
+		} else {
+			if (options.pan) {
 				this._rawPanBy(offset);
-
-				this.fire('move');
-
-				clearTimeout(this._sizeTimer);
-				this._sizeTimer = setTimeout(L.bind(this.fire, this, 'moveend'), 200);
 			}
-			this.fire('resize', {
-				oldSize: oldSize,
-				newSize: newSize
-			});
+
+			this.fire('move');
+
+			// make sure moveend is not fired too often on resize
+			clearTimeout(this._sizeTimer);
+			this._sizeTimer = setTimeout(L.bind(this.fire, this, 'moveend'), 200);
 		}
-		return this;
+
+		return this.fire('resize', {
+			oldSize: oldSize,
+			newSize: newSize
+		});
 	},
 
 	// TODO handler.addTo
@@ -480,15 +491,10 @@ L.Map = L.Class.extend({
 	_initLayout: function () {
 		var container = this._container;
 
-		L.DomUtil.addClass(container, 'leaflet-container');
-
-		if (L.Browser.touch) {
-			L.DomUtil.addClass(container, 'leaflet-touch');
-		}
-
-		if (this.options.fadeAnimation) {
-			L.DomUtil.addClass(container, 'leaflet-fade-anim');
-		}
+		L.DomUtil.addClass(container, 'leaflet-container' +
+			(L.Browser.touch ? ' leaflet-touch' : '') +
+			(L.Browser.retina ? ' leaflet-retina' : '') +
+			(this.options.fadeAnimation ? ' leaflet-fade-anim' : ''));
 
 		var position = L.DomUtil.getStyle(container, 'position');
 
@@ -579,6 +585,7 @@ L.Map = L.Class.extend({
 
 		if (loading) {
 			this.fire('load');
+			this.eachLayer(this._layerAdd, this);
 		}
 
 		this.fire('viewreset', {hard: !preserveMapOffset});
@@ -667,14 +674,16 @@ L.Map = L.Class.extend({
 	},
 
 	_onMouseClick: function (e) {
-		if (!this._loaded || (this.dragging && this.dragging.moved())) { return; }
+		// jshint camelcase: false
+		if (!this._loaded || (this.dragging && this.dragging.moved()) || e._leaflet_stop) { return; }
 
 		this.fire('preclick');
 		this._fireMouseEvent(e);
 	},
 
 	_fireMouseEvent: function (e) {
-		if (!this._loaded) { return; }
+		// jshint camelcase: false
+		if (!this._loaded || e._leaflet_stop) { return; }
 
 		var type = e.type;
 
@@ -718,6 +727,11 @@ L.Map = L.Class.extend({
 			this.on('load', callback, context);
 		}
 		return this;
+	},
+
+	_layerAdd: function (layer) {
+		layer.onAdd(this);
+		this.fire('layeradd', {layer: layer});
 	},
 
 
