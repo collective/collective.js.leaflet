@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.6dev (unreleased)
--------------------
+0.6 (2014-04-30)
+----------------
 
-- Nothing changed yet.
+- Laflet + Plugins update from 2013-06-24.
+  [thet]
 
 
 0.5 (2013-06-11)

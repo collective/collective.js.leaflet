@@ -43,6 +43,12 @@ You can watch a demo video here: `Youtube DEMO
 <http://www.youtube.com/watch?v=cVOQkhmUffg>`_.
 
 
+TODO
+====
+
+* Write proper tests.
+
+
 Credits
 =======
 
