@@ -19,3 +19,5 @@ sys
 var
 .*
 !.gitignore
+include/
+lib/
