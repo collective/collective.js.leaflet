@@ -7,7 +7,7 @@ Introduction
 Description
 ===========
 
-Enrich your Plone site with the power of Leaflet maps.
+Enrich your Plone site with the power of Leaflet maps. Leaflet version of this package is 0.7.3.
 
 https://github.com/Leaflet/Leaflet
 
