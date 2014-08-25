@@ -4,7 +4,8 @@ Changelog
 0.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Update Leaflet version of this package (now 0.7.3).
+  [bsuttor]
 
 
 0.6 (2014-04-30)
