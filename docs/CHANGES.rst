@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.7 (unreleased)
+0.7 (2014-08-26)
 ----------------
 
 - Update Leaflet version of this package (now 0.7.3).
