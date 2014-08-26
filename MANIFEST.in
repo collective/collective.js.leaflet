@@ -1,3 +1,7 @@
-recursive-include src *
+graft src
 recursive-include docs *
 include README.rst
+include *.py
+exclude *.cfg
+recursive-exclude seleniums *.selenium
+global-exclude *.pyc
