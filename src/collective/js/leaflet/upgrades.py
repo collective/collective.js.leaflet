@@ -16,3 +16,7 @@ def upgrade_12_to_13(context):
 
 def upgrade_13_to_14(context):
     context.runImportStepFromProfile(default_profile, 'cssregistry')
+
+
+def upgrade_14_to_15(context):
+    context.runImportStepFromProfile(default_profile, 'cssregistry')

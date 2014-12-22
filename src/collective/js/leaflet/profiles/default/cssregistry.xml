@@ -139,25 +139,9 @@
       />
 
   <stylesheet
-      bundle="default"
-      id="++resource++collective.js.leaflet/leaflet.ie.css"
-      insert-after="*"
-      applyPrefix="True"
-      cacheable="True"
-      compression="safe"
-      conditionalcomment="lt ie 8"
-      cookable="True"
-      enabled="True"
-      expression=""
-      media="screen"
-      rel="stylesheet"
-      rendering="link"
-      />
-
-  <stylesheet
       bundle="leaflet.markercluster"
       id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.ie.css"
-      insert-after="++resource++collective.js.leaflet/leaflet.ie.css"
+      insert-after="*"
       applyPrefix="True"
       cacheable="True"
       compression="safe"
@@ -201,5 +185,8 @@
       rel="stylesheet"
       rendering="link"
       />
-      
+
+  <!-- upgrade -->
+  <stylesheet remove="True" id="++resource++collective.js.leaflet/leaflet.ie.css" />
+
 </object>

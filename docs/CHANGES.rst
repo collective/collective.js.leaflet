@@ -4,7 +4,8 @@ Changelog
 0.7.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove leaflet.ie.css, as it was removed from Leaflet.
+  [thet]
 
 
 0.7 (2014-08-26)
