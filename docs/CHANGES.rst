@@ -4,6 +4,9 @@ Changelog
 0.7.1 (unreleased)
 ------------------
 
+- Set all JavaScript registrations to cachable and cookable True.
+  [thet]
+
 - Remove leaflet.ie.css, as it was removed from Leaflet.
   [thet]
 
