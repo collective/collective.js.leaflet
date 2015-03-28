@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <object name="portal_css">
 
-<!--
-     <stylesheet remove="True" id="++resource++sb_resources/something.css" />
--->
+  <stylesheet remove="True" id="++resource++collective.js.leaflet/leaflet.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.ie.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw.ie.css"/>
+  <stylesheet remove="True" id="++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.ie.css"/>
+
+  <!-- upgrade -->
+  <stylesheet remove="True" id="++resource++collective.js.leaflet/leaflet.ie.css" />
+
 </object>

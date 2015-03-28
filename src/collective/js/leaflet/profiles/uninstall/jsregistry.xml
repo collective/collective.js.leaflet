@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
-<object name="portal_javascripts" meta_type="JavaScripts Registry">
-<!--
-  <javascript id="++resource++collective.js.leaflet/something.js" remove="True"/>
--->
+<object name="portal_javascripts">
+
+  <javascript remove="True" id="++resource++collective.js.leaflet/leaflet.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/leaflet.zoomfs/leaflet.zoomfs.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.bing.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.esri.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.google.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.nokia.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw-src.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap-de.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/leaflet-providers/leaflet-providers.js"/>
+  <javascript remove="True" id="++resource++collective.js.leaflet.plugins/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js"/>
+  <javascript remove="True" id="http://maps.stamen.com/js/tile.stamen.js"/>
+
 </object>
