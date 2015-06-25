@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.7.1 (unreleased)
+0.7.1 (2015-06-25)
 ------------------
 
 - Set all JavaScript registrations to cachable and cookable True.
