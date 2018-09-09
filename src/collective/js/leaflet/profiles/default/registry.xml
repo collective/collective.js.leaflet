@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records prefix="plone.resources/leaflet"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet/leaflet.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet/leaflet.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-markercluster"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.css</element>
+      <element>++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/MarkerCluster.Default.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/Leaflet.markercluster/dist/leaflet.markercluster-src.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-fullscreen"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/leaflet.fullscreen/Control.FullScreen.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-zoomfs"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/leaflet.zoomfs/leaflet.zoomfs.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/L.GeoSearch/src/css/l.geosearch.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.control.geosearch.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch-openstreetmap"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.openstreetmap.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch-bing"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.bing.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch-esri"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.esri.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch-google"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.google.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-geosearch-nokia"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/L.GeoSearch/src/js/l.geosearch.provider.nokia.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-draw"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/Leaflet.draw/dist/leaflet.draw-src.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-locatecontrol"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/leaflet-locatecontrol/src/L.Control.Locate.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-minimap"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-minimap-de"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/Leaflet-MiniMap/src/Control.MiniMap-de.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-providers"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/leaflet-providers/leaflet-providers.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-awesome-markers"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.js.leaflet.plugins/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css</element>
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-stamen"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/tile.stamen/tile.stamen.js</value>
+  </records>
+
+  <records prefix="plone.resources/leaflet-plone"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+    </value>
+    <value key="js">++resource++collective.js.leaflet.plugins/plone/plone.integration.js</value>
+  </records>
+
+  <records prefix="plone.bundles/leaflet"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources" purge="false">
+      <element>leaflet</element>
+      <element>leaflet-markercluster</element>
+      <element>leaflet-fullscreen</element>
+      <element>leaflet-zoomfs</element>
+      <element>leaflet-geosearch</element>
+      <element>leaflet-geosearch-openstreetmap</element>
+      <element>leaflet-geosearch-bing</element>
+      <element>leaflet-geosearch-esri</element>
+      <element>leaflet-geosearch-google</element>
+      <element>leaflet-geosearch-nokia</element>
+      <element>leaflet-draw</element>
+      <element>leaflet-locatecontrol</element>
+      <element>leaflet-minimap</element>
+      <element>leaflet-minimap-de</element>
+      <element>leaflet-providers</element>
+      <element>leaflet-awesome-markers</element>
+      <element>leaflet-stamen</element>
+      <element>leaflet-plone</element>
+    </value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++static/leaflet-compiled.js</value>
+    <value key="csscompilation">++plone++static/leaflet-compiled.css</value>
+    <value key="last_compilation">2015-09-10 00:00:00</value>
+    <value key="depends">geo</value>
+  </records>
+
+</registry>
