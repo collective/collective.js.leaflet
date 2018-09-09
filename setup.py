@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '0.7.2.dev0'
+version = '1.0.0.dev0'
 
 
 def read(*rnames):
@@ -18,10 +18,7 @@ long_description = "\n\n".join(
 
 classifiers = [
     "Framework :: Plone",
-    #"Framework :: Plone :: 4.0", # no ResourceRegistries>=2.1a1
-    #"Framework :: Plone :: 4.1", # no ResourceRegistries>=2.1a1
-    "Framework :: Plone :: 4.2",
-    "Framework :: Plone :: 4.3",
+    "Framework :: Plone :: 5.0",
     "Programming Language :: Python",
     "Topic :: Software Development"
 ]

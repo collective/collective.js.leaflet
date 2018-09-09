@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.7.2 (unreleased)
+1.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Migrate to Plone 5
+  [mpeeters]
 
 
 0.7.1 (2015-06-25)
