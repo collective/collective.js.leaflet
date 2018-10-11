@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.7.2 (unreleased)
+0.7.2 (2018-10-11)
 ------------------
 
 - Fix url for search on openstreetmap .
