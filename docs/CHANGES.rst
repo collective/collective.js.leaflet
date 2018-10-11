@@ -4,7 +4,8 @@ Changelog
 0.7.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix url for search on openstreetmap .
+  [bsuttor]
 
 
 0.7.1 (2015-06-25)
