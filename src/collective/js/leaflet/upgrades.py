@@ -20,3 +20,7 @@ def upgrade_13_to_14(context):
 
 def upgrade_14_to_15(context):
     context.runImportStepFromProfile(default_profile, 'cssregistry')
+
+
+def upgrade_15_to_16(context):
+    context.runImportStepFromProfile(default_profile, 'plone.app.registry')
